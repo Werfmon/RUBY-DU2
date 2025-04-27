@@ -1,0 +1,22 @@
+<h1>Notes</h1>
+<%= link_to 'New Note', new_note_path %>
+<table>
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @notes.each do |note| %>
+    <tr>
+      <td><%= note.title %></td>
+      <td>
+        <%= link_to 'Show', note_path(note) %>
+        <%= link_to 'Edit', edit_note_path(note) %>
+        <%= link_to 'Delete', note_path(note), method: :delete, data: { confirm: 'Are you sure?' } %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

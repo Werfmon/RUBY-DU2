@@ -1,0 +1,13 @@
+<h1>User Detail</h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @user.role %>
+</p>
+
+<%= link_to 'Delete', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
